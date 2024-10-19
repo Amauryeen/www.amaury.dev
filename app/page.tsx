@@ -29,7 +29,7 @@ export default function HomePage() {
       style={{
         height: "100vh",
         background: "linear-gradient(135deg, #6b73ff 0%, #000dff 100%)",
-        padding: "10px",
+        padding: "20px",
       }}
     >
       <Box
