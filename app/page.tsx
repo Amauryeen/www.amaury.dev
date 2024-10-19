@@ -63,8 +63,6 @@ export default function HomePage() {
                 Analyst Developer
               </Text>
               <Text style={{ marginBottom: "30px", color: "#777" }}>
-                I am passionate in IT, recently graduated from a bachelor.
-                <br />
                 Check my social networks to know more about me!
               </Text>
             </Box>
