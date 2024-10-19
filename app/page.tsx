@@ -29,91 +29,103 @@ export default function HomePage() {
       style={{
         height: "100vh",
         background: "linear-gradient(135deg, #6b73ff 0%, #000dff 100%)",
-        padding: "20px",
+        padding: "10px",
       }}
     >
-      <Transition
-        mounted={visible}
-        transition="fade"
-        duration={500}
-        timingFunction="ease"
+      <Box
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+          borderRadius: "15px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          border: "1px solid #ccc",
+          boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+          width: "100%",
+          maxWidth: "800px",
+          flexWrap: "wrap",
+        }}
       >
-        {(styles) => (
-          <Box
+        <Box
+          style={{
+            flex: 1,
+            minWidth: "250px",
+          }}
+        >
+          <Title
+            order={1}
             style={{
-              ...styles,
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "flex-start",
-              padding: "40px",
-              borderRadius: "15px",
-              backgroundColor: "rgba(255, 255, 255, 0.9)",
-              border: "1px solid #ccc",
-              boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
-              width: "80%",
-              maxWidth: "800px",
-              flexWrap: "wrap",
+              marginBottom: "10px",
+              color: "#333",
+              textAlign: "center",
             }}
           >
-            <Box style={{ flex: 1, paddingRight: "20px", minWidth: "250px" }}>
-              <Title order={1} style={{ marginBottom: "10px", color: "#333" }}>
-                Amaury GROTARD
-              </Title>
-              <Text style={{ marginBottom: "20px", color: "#555" }}>
-                Analyst Developer
-              </Text>
-              <Text style={{ marginBottom: "30px", color: "#777" }}>
-                Check my social networks to know more about me!
-              </Text>
-            </Box>
-            <Divider orientation="vertical" style={{ margin: "0 20px" }} />
-            <Box style={{ flex: 1, paddingLeft: "20px", minWidth: "250px" }}>
-              <Stack style={{ width: "100%" }}>
-                <Button
-                  variant="outline"
-                  color="blue"
-                  leftSection={<IconMail size={18} />}
-                  component="a"
-                  href="mailto:contact@amaury.dev"
-                  style={{
-                    borderColor: "#d44638",
-                    color: "#d44638",
-                    width: "100%",
-                  }}
-                >
-                  Email
-                </Button>
-                <Button
-                  variant="outline"
-                  color="blue"
-                  leftSection={<IconBrandLinkedin size={18} />}
-                  component="a"
-                  href="https://www.linkedin.com/in/amaury-grotard"
-                  target="_blank"
-                  style={{
-                    borderColor: "#0077b5",
-                    color: "#0077b5",
-                    width: "100%",
-                  }}
-                >
-                  LinkedIn
-                </Button>
-                <Button
-                  variant="outline"
-                  color="blue"
-                  leftSection={<IconBrandGithub size={18} />}
-                  component="a"
-                  href="https://github.com/amauryeen"
-                  target="_blank"
-                  style={{ borderColor: "#333", color: "#333", width: "100%" }}
-                >
-                  GitHub
-                </Button>
-              </Stack>
-            </Box>
-          </Box>
-        )}
-      </Transition>
+            Amaury GROTARD
+          </Title>
+          <Text
+            style={{
+              marginBottom: "20px",
+              color: "#555",
+              textAlign: "center",
+            }}
+          >
+            Analyst Developer
+          </Text>
+          <Text
+            style={{
+              color: "#777",
+              textAlign: "center",
+              marginBottom: "20px",
+            }}
+          >
+            Check my social networks to know more about me!
+          </Text>
+          <Stack style={{ width: "100%" }}>
+            <Button
+              variant="outline"
+              color="blue"
+              leftSection={<IconMail size={18} />}
+              component="a"
+              href="mailto:contact@amaury.dev"
+              style={{
+                borderColor: "#d44638",
+                color: "#d44638",
+                width: "100%",
+              }}
+            >
+              Email
+            </Button>
+            <Button
+              variant="outline"
+              color="blue"
+              leftSection={<IconBrandLinkedin size={18} />}
+              component="a"
+              href="https://www.linkedin.com/in/amaury-grotard"
+              target="_blank"
+              style={{
+                borderColor: "#0077b5",
+                color: "#0077b5",
+                width: "100%",
+              }}
+            >
+              LinkedIn
+            </Button>
+            <Button
+              variant="outline"
+              color="blue"
+              leftSection={<IconBrandGithub size={18} />}
+              component="a"
+              href="https://github.com/amauryeen"
+              target="_blank"
+              style={{ borderColor: "#333", color: "#333", width: "100%" }}
+            >
+              GitHub
+            </Button>
+          </Stack>
+        </Box>
+      </Box>
     </Center>
   );
 }
